@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Guardian | Professional Bypass Solutions</title>
+    
+    <meta name="title" content="Spectrum Guardian | Professional Bypass Solutions">
+    <meta name="description" content="Professional File Encryption & Antivirus Bypass Solutions. Fully Undetectable (FUD) & Advanced Evasion.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spectrumguardian.github.io/">
+    <meta property="og:title" content="Spectrum Guardian | Professional Bypass Solutions">
+    <meta property="og:description" content="Professional File Encryption & Antivirus Bypass Solutions. Fully Undetectable (FUD) & Advanced Evasion.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/SpectrumGuardian/WallAntis/main/Spectrum-Encryption.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spectrumguardian.github.io/">
+    <meta property="twitter:title" content="Spectrum Guardian | Professional Bypass Solutions">
+    <meta property="twitter:description" content="Professional File Encryption & Antivirus Bypass Solutions. Fully Undetectable (FUD) & Advanced Evasion.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/SpectrumGuardian/WallAntis/main/Spectrum-Encryption.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #0f1115;
+            --bg-card: #1f232d;
+            --bg-card-hover: #262b38;
+            --primary: #3b82f6; 
+            --primary-hover: #2563eb;
+            --text-main: #f3f4f6;
+            --text-muted: #b0b8c4;
+            --border-color: #2d313a;
+            --success: #10b981;
+            --youtube-red: #ff0000;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            background-color: rgba(15, 17, 21, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* General Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--bg-card);
+            border-color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 5% 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Common Section Settings */
+        .section-padding {
+            padding: 5rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            line-height: 1.4;
+        }
+
+        .feature-list i {
+            color: var(--success);
+            font-size: 0.9rem;
+            margin-top: 3px;
+        }
+
+        .feature-list strong {
+            color: var(--text-main);
+        }
+
+        /* Video / Proof of Concept Section */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .video-card:hover {
+            border-color: var(--youtube-red);
+            transform: translateY(-4px);
+            background-color: var(--bg-card-hover);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.15);
+        }
+
+        .video-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .video-info i.av-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            width: 30px;
+            text-align: center;
+        }
+
+        .video-card:hover .video-info i.av-icon {
+            color: var(--text-main);
+        }
+
+        .video-info h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .video-info span {
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .play-btn {
+            color: var(--youtube-red);
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover .play-btn {
+            transform: scale(1.15);
+        }
+
+        /* Pricing / Plans Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: linear-gradient(145deg, var(--bg-card), #14171f);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Discount Badge */
+        .discount-badge {
+            position: absolute;
+            top: -15px;
+            right: 25px;
+            background: linear-gradient(90deg, var(--danger), var(--warning));
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+            z-index: 10;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Pricing Area Design */
+        .price-wrap {
+            margin: 10px 0 20px 0;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .new-price {
+            color: var(--success);
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .package-desc {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .pricing-features {
+            list-style: none;
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 6px 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pricing-features li i {
+            color: var(--success);
+            font-size: 0.9rem;
+            margin-top: 3px;
+        }
+
+        .package-footer {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 12px 0;
+            background: linear-gradient(90deg, #2b95ce, #4cac5b);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.3s, transform 0.2s;
+        }
+
+        .btn-buy:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-socials {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-socials a {
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo"><i class="fa-solid fa-shield-halved"></i> Spectrum<span>Guardian</span></a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#videos">Proofs</a>
+            <a href="#packages">Packages</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Professional File Encryption & <span>Antivirus Bypass</span></h1>
+        <p>An effective solution designed to securely encrypt your files, bypass modern antivirus heuristics, and keep your security testing at the highest level.</p>
+        <div class="hero-btns">
+            <a href="#packages" class="btn">View Packages</a>
+            <a href="#videos" class="btn btn-outline"><i class="fa-solid fa-play"></i> Watch Proofs</a>
+        </div>
+    </section>
+
+    <section id="features" class="section-padding" style="background-color: var(--bg-card);">
+        <div class="section-header">
+            <h2>✨ Feature List & Architecture</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">Our solutions are built from the ground up to ensure maximum stealth and execution reliability.</p>
+        </div>
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <h3>🔐 Encryption & Protection Level</h3>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Standard Protection</strong></span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Maximum Security</strong></span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Enterprise Grade</strong></span></li>
+                    <li style="margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 15px;"><i class="fa-solid fa-check"></i> <span><strong>Supported Algorithms:</strong> AES-256, RC4, XOR, Blowfish, ChaCha20, RSA-2048</span></li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>⚡ Core Features</h3>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Polymorphic Engine</strong></span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Code Obfuscation</strong> - Always FUD (Fully Undetectable)</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Convert to Bat</strong> - Maintains file properties in .bat language</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Disable UAC</strong> - Complete User Account Control bypass</span></li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🖥️ Windows Integration</h3>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> <span><strong>WD Exclusion</strong> - Creates exclusions for exe, bat, cmd, jar, py, dll</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>WD Smart Screen Bypass</strong></span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Startup Integration</strong> - Hidden execution capabilities</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Task Scheduler</strong> (schtasks)</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>WD Notifications Block</strong></span></li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h3>🛠️ Advanced Capabilities</h3>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> <span><strong>32 & 64 Bit Support</strong> - .Net and native files compatibility</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>File Integration</strong> - Works with PDF, EXCEL, Any Setup files</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>HTA Downloader</strong> - FUD Private Coding</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>PDF Exploit Generator</strong> - Advanced PDF exploitation</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>Multi Binder</strong> - High-level linker merging files</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span><strong>MetaData Clone</strong> - Clone assembly metadata between executables</span></li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="videos" class="section-padding">
+        <div class="section-header">
+            <h2>Antivirus Bypass Proofs</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">Watch our evasion solutions successfully bypassing top-tier security engines.</p>
+        </div>
+        <div class="video-grid">
+            
+            <a href="https://youtu.be/qU1hFaNgyr4" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Windows Defender</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=XrHcoP-I33c" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>McAfee Total Security</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/6sCFJBM0mCE" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Webroot Secure Anywhere</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/2YXLnueyFFw" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Eset Endpoint Security</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/__z3aJs1A3Y" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Kaspersky Endpoint Security</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/hsMhl_n7dGY" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Avast Antivirus</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/ERU0NdEOrUo" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>AVG Antivirus</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/G5FcQI1-vdQ" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Bitdefender Total Security</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/dXUh1OU8Q4g" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Comodo Antivirus</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/IR5ULVOPUpw" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Total 360 Security</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/IR5ULVOPUpw" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Alyac Antivirus</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/IR5ULVOPUpw" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Ahnlab V3</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/IR5ULVOPUpw" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>MalwareBytes Anti-Malware</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/z3DdMUO_Bo4" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Dr.Web Security</h4><span>✅ Bypassed</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+        </div>
+
+        <div class="section-header" style="margin-top: 5rem; margin-bottom: 3rem;">
+            <h2>Feature Demonstrations</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">See our payloads, exploits, and multi-binders in action.</p>
+        </div>
+        <div class="video-grid">
+            
+            <a href="https://youtu.be/0HWVtiYGYgE" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Payload working with PDF | Exploit</h4><span>🔥 Core Feature</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/vicvtc4Noac" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>PDF Exploit Generator</h4><span>🔥 Core Feature</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/hIj-7MCSXSU" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Build HTA File With Your URL</h4><span>🔥 Core Feature</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/jTXkLVkZFpo" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>WD Exclusion & UAC Bypass & Hidden Startup</h4><span>🛡️ Advanced Bypass</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/DTTYB76lyqc" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>WD Bypass Exclusion & UAC Disable</h4><span>🛡️ Advanced Bypass</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/3Vd2VvmkegU" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>Multi Binder Feature</h4><span>⚡ Advanced Tool</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+            <a href="https://youtu.be/3udKeuZQYAU" target="_blank" class="video-card">
+                <div class="video-info"><i class="fa-solid fa-shield-virus av-icon"></i>
+                    <div><h4>WD, Chrome, AMSI, Smartscreen Bypass</h4><span>⚡ Complete Evasion</span></div></div>
+                <i class="fa-brands fa-youtube play-btn"></i>
+            </a>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://t.me/SpectrumGuardianOffical" target="_blank" class="btn btn-outline" style="font-size: 0.95rem;">
+                <i class="fa-brands fa-telegram"></i> Watch more demonstrations on our Telegram channel
+            </a>
+        </div>
+    </section>
+
+    <section id="packages" class="section-padding" style="background-color: var(--bg-card);">
+        <div class="section-header">
+            <h2><i class="fa-solid fa-bolt" style="color: var(--warning);"></i> Limited Time Special Offers</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; font-style: italic;">"Bypassing is not a problem, only condition is money."</p>
+        </div>
+        
+        <div class="pricing-grid">
+            
+            <div class="pricing-card">
+                <div class="discount-badge">-20% OFF</div>
+                <h3>Starter Package</h3>
+                <p class="package-desc">Perfect for users who want full encryption features with a short-term license.</p>
+                
+                <div class="price-wrap">
+                    <span class="old-price">$400</span>
+                    <span class="new-price">$320</span>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> <span>30-day license period</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Weekly updated premium stub</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Full encryption feature set (same as Advanced Package)</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Polymorphic engine</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Advanced encryption algorithms</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Basic Telegram support</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Regular updates</span></li>
+                </ul>
+
+                <p class="package-footer">Ideal for testing and short-term usage. Not recommended for long-term or commercial projects.</p>
+
+                <a href="https://t.me/SpectrumGuardian" target="_blank" class="btn-buy">Buy Now</a>
+            </div>
+
+            <div class="pricing-card">
+                <div class="discount-badge">-15% OFF</div>
+                <h3>Advanced Package</h3>
+                <p class="package-desc">Professional package for advanced users and organizations.</p>
+                
+                <div class="price-wrap">
+                    <span class="old-price">$2800</span>
+                    <span class="new-price">$2380</span>
+                </div>
+                
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> <span>270-day extended license</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Weekly updated premium stub</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Priority Telegram support</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Remote RDP & AnyDesk support</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>RAT, Stealer, Logger tool setup support</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Tool configuration and optimization assistance</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Advanced encryption algorithms</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Polymorphic engine</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>Full feature access</span></li>
+                    <li><i class="fa-solid fa-check"></i> <span>24/7 dedicated technical support</span></li>
+                </ul>
+
+                <p class="package-footer">Perfect for commercial use and long-term projects requiring maximum security, remote access and advanced cyber tool support.</p>
+
+                <a href="https://t.me/SpectrumGuardian" target="_blank" class="btn-buy">Buy Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://t.me/SpectrumGuardian" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://github.com/SpectrumGuardian" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://solo.to/spectrumguardian" target="_blank" title="Solo.to"><i class="fa-solid fa-link"></i></a>
+            <a href="https://vimeo.com/spectrumguardian" target="_blank" title="Vimeo"><i class="fa-brands fa-vimeo"></i></a>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;">For professional needs and video demonstrations, visit our official channels.</p>
+        <p style="color: var(--text-muted); font-size: 0.8rem;">&copy; 2026 Spectrum Guardian. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
