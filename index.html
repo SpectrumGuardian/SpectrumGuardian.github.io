@@ -328,20 +328,7 @@
             box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
         }
 
-        /* Discount Badge */
-        .discount-badge {
-            position: absolute;
-            top: -15px;
-            right: 25px;
-            background: linear-gradient(90deg, var(--danger), var(--warning));
-            color: white;
-            font-size: 0.85rem;
-            font-weight: 800;
-            padding: 6px 16px;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
-            z-index: 10;
-        }
+        /* Discount Badge REMOVED */
 
         .pricing-card h3 {
             font-size: 1.4rem;
@@ -362,11 +349,13 @@
             padding-bottom: 15px;
         }
 
+        /* Old price style not needed anymore, but kept if you revert later */
         .old-price {
             text-decoration: line-through;
             color: var(--text-muted);
             font-size: 1.2rem;
             font-weight: 600;
+            display: none; /* Hidden */
         }
 
         .new-price {
@@ -689,20 +678,18 @@
 
     <section id="packages" class="section-padding" style="background-color: var(--bg-card);">
         <div class="section-header">
-            <h2><i class="fa-solid fa-bolt" style="color: var(--warning);"></i> Limited Time Special Offers</h2>
+            <h2>Professional Packages</h2>
             <p style="color: var(--text-muted); font-size: 1.1rem; font-style: italic;">"Bypassing is not a problem, only condition is money."</p>
         </div>
         
         <div class="pricing-grid">
             
             <div class="pricing-card">
-                <div class="discount-badge">-20% OFF</div>
                 <h3>Starter Package</h3>
                 <p class="package-desc">Perfect for users who want full encryption features with a short-term license.</p>
                 
                 <div class="price-wrap">
-                    <span class="old-price">$400</span>
-                    <span class="new-price">$320</span>
+                    <span class="new-price">$400</span>
                 </div>
                 
                 <ul class="pricing-features">
@@ -721,13 +708,11 @@
             </div>
 
             <div class="pricing-card">
-                <div class="discount-badge">-15% OFF</div>
                 <h3>Advanced Package</h3>
                 <p class="package-desc">Professional package for advanced users and organizations.</p>
                 
                 <div class="price-wrap">
-                    <span class="old-price">$2800</span>
-                    <span class="new-price">$2380</span>
+                     <span class="new-price">$2800</span>
                 </div>
                 
                 <ul class="pricing-features">
